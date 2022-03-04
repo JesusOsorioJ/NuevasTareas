@@ -1,0 +1,37 @@
+div{
+    padding: 10px;
+    border: 10px solid #d0d0d0;
+    width: 100px;
+    height:100px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+img {
+    width: 100px;
+    height:100px;
+}
+
+/*
+resalta el texto encerrado en <mark>
+
+block: los deja del tamaño de 100px pero uno debajo de otro, 
+inline los deja en el minimo tamaño y uno al lado del tro formando una inea horizontal
+, inline-block los mismo ue inline pero aora los bloues ocupan los 100px, 
+none los bloques dessaparecen
+
+la imagen queda al mismo nivel que paraffo. el parrafo que al nivel bajo de la imagen
+ nivel se desordena todo
+
+ed esta orma queda mas ordenado el primer texto arriba luego la imagen en medio
+y luego abajo 
+
+ajusta el modelo de caja al tamaño de el borde y saca a a imagen de la caja
+
+agrega un padding y un margin a la imagen en cuestion
+
+se centra la caja en la mitad de la pantalla
+*/
+
+
+
