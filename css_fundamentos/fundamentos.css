@@ -13,24 +13,23 @@ img {
 }
 
 /*
-resalta el texto encerrado en <mark>
+1. Resalta el texto encerrado en **<mark>**
+2. 
+* **Block:** Pone los <div> del tamaño de 100px pero uno debajo de otro.
+* **Inline:** Pone los <div> en el minimo tamaño y uno al lado del otro formando una linea horizontal
+* **Inline-block:** Pone los <div>  en horizontal pero ahora los bloques ocupan los 100px, 
+* **None:** los bloques dessaparecen
 
-block: los deja del tamaño de 100px pero uno debajo de otro, 
-inline los deja en el minimo tamaño y uno al lado del tro formando una inea horizontal
-, inline-block los mismo ue inline pero aora los bloues ocupan los 100px, 
-none los bloques dessaparecen
+3. La imagen queda como linea horizontal con el parafo. El parrafo queda al nivel bajo de la imagen.
 
-la imagen queda al mismo nivel que paraffo. el parrafo que al nivel bajo de la imagen
- nivel se desordena todo
+4. De esta forma queda mas ordenado el primer texto arriba luego la imagen en medio
+y luego abajo.
 
-ed esta orma queda mas ordenado el primer texto arriba luego la imagen en medio
-y luego abajo 
+5. 
+* Agrega un **padding** y un **margin** a la imagen dentro de los <div>
+* Ajusta el modelo de caja al tamaño del borde y por lo tanto saca la imagen de la caja.
+* Se centra la caja en la mitad de la pantalla
 
-ajusta el modelo de caja al tamaño de el borde y saca a a imagen de la caja
-
-agrega un padding y un margin a la imagen en cuestion
-
-se centra la caja en la mitad de la pantalla
 */
 
 
