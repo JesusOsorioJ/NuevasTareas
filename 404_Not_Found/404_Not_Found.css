@@ -1,0 +1,34 @@
+div {
+    display: grip;
+    grid-column: 1fr;
+}
+
+.texto__tituto{
+    font-size: large;
+    font-style: italic;
+} 
+
+.texto__texto{
+    font-size: small;
+}
+
+button{
+    width:6rem;
+}
+
+img {
+ width: 100vw;
+}
+
+@media (min-width: 320px)  {
+    div {
+        display: flex;      
+    }
+    div div{
+        display: flex;
+        flex-direction: column;
+    }
+    div img{
+        width: 50vw;
+    }
+} 
