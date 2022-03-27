@@ -1,0 +1,19 @@
+{
+  "name": "segundatarea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "faker-js": "^1.0.0",
+    "morgan": "^1.10.0"
+  }
+}
