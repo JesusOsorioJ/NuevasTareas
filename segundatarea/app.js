@@ -16,7 +16,6 @@ app.get('/api/persons', (req,res)=>{
 
 //2. Ontener el tamaño de la agenda(.lenght) y la fecha
 app.get('/info', (req,res)=>{
-    console.log("xxxxxxxxxxxx")
     const print =(`Phone number has ${persons.length} people  ${Date()}`)
     res.json(print)
 })
