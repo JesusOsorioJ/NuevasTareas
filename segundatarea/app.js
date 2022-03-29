@@ -16,7 +16,7 @@ app.get('/api/persons', (req,res)=>{
 
 //2. Ontener el tamaño de la agenda(.lenght) y la fecha
 app.get('/info', (req,res)=>{
-    const print =(`Phone number has ${persons.length} people  ${Date()}`)
+    const print =`Phone number has ${persons.length} people  ${Date()}`
     res.json(print)
 })
 
@@ -35,9 +35,8 @@ app.get('/api/persons/:id', (req,res)=>{
 //4. Eliminar a una persona de la lista
 app.delete('/api/persons/:id', (req,res)=>{
     const id = Number(req.params.id)
-    const person = persons.find(person => person.id === Number(id));
-    persons.splice(persons.indexOf(person), 1);
-
+    const person = persons.filter(person => !(person.id === Number(id)));
+    persons = person;
     if (!person) {
         res.status(404).json(`People not found with id: ${id}`)
     }else{
@@ -49,7 +48,7 @@ app.delete('/api/persons/:id', (req,res)=>{
 app.post('/api/persons/', (req,res)=>{
     const newperson = req.body
     newperson.id = Math.random()
-    persons.push(newperson);
+    persons.push({...newperson});
     res.status(201).json(persons); 
 })
 
@@ -79,7 +78,7 @@ app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
   });
 
-const persons = [
+var persons = [
     {id:1,
     name:"arturo artella",
     number:"0231-12211"},
