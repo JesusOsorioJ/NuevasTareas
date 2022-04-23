@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Open+Sans:wght@300;400&display=swap");
+
+@mixin link-body {
+  font-family: "League Gothic";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  border-radius: 0.5em;
+  color: white;
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  text-decoration: none;
+  background-color: #18a0fb;
+  border: 3px solid #18a0fb;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px black;
+  width: 250px;
+  margin: 30px;
+  border-radius: 20px;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 30px;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: solid 1px gray;
+}
+
+
+
+.parrafo{
+  text-align: justify;
+}
+
+.profile{
+  margin: auto;
+  margin-top: 40px;
+  border: solid 1px black;
+  border-radius: 20px;
+  max-width: 1000px;
+  .head{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin:20px;
+    border-bottom: solid 1px black;
+    .head1{
+      display: flex;
+      justify-content: space-between;
+      min-width: 350px;
+    }
+  }
+}
+
+.button {
+  @include link-body;
+}
+
+.buttondisable {
+  @include link-body;
+  background-color: #8b8b8b;
+  border: 3px solid #8b8b8b;
+}
+
+.buttonbig {
+  @include link-body;
+  background-color: black;
+  border: 3px solid black;
+  font-size: 30px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #18a0fb;
+}
+
+.buttonbig:hover {
+  background-color: white;
+  color: black;
+}
+
+.preloader {
+  margin: auto;
+  margin-top: 100px;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.head{
+    display: flex;
+    img{
+        max-width: 100px;
+    }
+}
+
+.body{
+  margin:40px;
+}
