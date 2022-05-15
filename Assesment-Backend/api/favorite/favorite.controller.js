@@ -44,7 +44,7 @@ async function handlerDeleteList(req,res) {
        }
 
         const list = await DeleteList(id);
-        return res.status(200).json(list);
+        return res.status(200).json({ message: `Lista con ID ${id} eliminada` });
     }catch (error){
         return res.status(404).json({ message: 'Information not found' });
     }

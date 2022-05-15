@@ -20,14 +20,14 @@ async function handlerCreateUser(req,res){
     const newUser = req.body;
     const search = await UserByEmail(email)
     try{
-        if (!pass.test(password)){
-            return res.status(203).json({ message: 'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.' });
-        }
         if(search){
             return res.status(203).json({ message: 'Correo en uso por favor escoga otro'});
         }
+        if (!pass.test(password)){
+            return res.status(203).json({ message: 'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.' });
+        }
         const user = await CreateUser(newUser);
-        return res.status(201).json({ message: 'User created' });
+        return res.status(201).json({ message: `Usuario ${email} creado` });
     }catch(error){
         console.log(error)
         return res.status(500).json(error);
