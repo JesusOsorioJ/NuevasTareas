@@ -10,20 +10,19 @@ async function handlerLoginUser(req, res) {
     const user = await UserByEmail(email);
 
     if (!user) {
-      return res.status(401).json('Correo o contraseña inválido, intente nuevamente');
+      return res.status(400).json('Correo o contraseña inválido, intente nuevamente');
     }
 
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
-      return res.status(401).json('Correo o contraseña inválido, intente nuevamente');
+      return res.status(400).json('Correo o contraseña inválido, intente nuevamente');
     }
 
     const token = signToken({email:user.email});
 
     return res.status(200).json(token);
   } catch (error) {
-      console.log(error)
-    return res.status(400).json('Correo o contraseña inválido, intente nuevamente');
+    return res.status(500).json(error);
   }
 }
 

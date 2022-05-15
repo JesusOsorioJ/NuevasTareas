@@ -40,7 +40,7 @@ async function handlerDeleteList(req,res) {
     try{
         const {email} = await ListById(id);
        if (req.user.email !== email){
-        return res.status(404).json({ message: 'User not authorization' });
+        return res.status(403).json({ message: 'User not authorization' });
        }
 
         const list = await DeleteList(id);
@@ -57,7 +57,7 @@ async function handlerCreateList(req,res) {
     const { email } = req.user;
     
         const list = await CreateNewList({email,favorites, name});
-        return res.status(200).json(list);
+        return res.status(201).json(list);
     }catch (error){
         console.log("error",error)
         return res.status(401).json(error);

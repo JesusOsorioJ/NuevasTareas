@@ -32,3 +32,6 @@ http://localhost:8080/api/favs/62803551f2b67058d94fe4af con body si es necesario
 3. Para lista por id enviar GET con id: ejemplo http://localhost:8080/api/favs/62803551f2b67058d94fe4af
 4. Para listas por usuario enviar GET con email: ejemplo http://localhost:8080/api/favs/email/hola@gmail.com
 
+## TESTING 🔎
+1. Se cuenta con 13 testing unitarios (4 para user y 9 para favorite)
+2. Podra ejecutarlos con npm test
