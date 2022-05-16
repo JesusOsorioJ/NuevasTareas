@@ -7,6 +7,8 @@ import './ProductCard.scss';
 export default function ProductCard({ data }) {
   const [time, setTime] = useState(parseInt((Math.random() * 24), 10) * 6);
   let disabled = false;
+  let segundos = 0;
+  let minutos = 0;
 
   if (time > 0) {
     setTimeout(() => {
@@ -15,8 +17,8 @@ export default function ProductCard({ data }) {
   } else {
     disabled = true;
   }
-  const segundos = time % 60;
-  const minutos = (time - segundos) / 60;
+  segundos = time % 60;
+  minutos = (time - segundos) / 60;
 
   return (
     <div className="card">
