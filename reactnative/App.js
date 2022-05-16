@@ -1,8 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
 import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet, FlatList, TextInput,TouchableOpacity,  } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, FlatList  } from 'react-native';
+import data from './data';
 
 const styles = StyleSheet.create({
   container:{
