@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -42,8 +41,6 @@ export default function Details() {
               </div>
             </div>
             <Link className="buttonbig" to="/">Home</Link>
-            {/* <h2>{(products.rating).rate}</h2> */}
-            {/* <h2>{products.rating.count}</h2> */}
           </div>
         </>
         )}
